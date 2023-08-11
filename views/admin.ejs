@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Przeprowadzki, bus, transport, Lublin, Polska" />
+    <meta http-equiv="author" content="Pawel Jakubiec" /> 
+    <link rel="stylesheet" href="/CSS/admin.css">
+    <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
+    <title>Project 1</title>
+    
+</head>
+<body>
+<!--Header-->
+    <div class="addColor1">
+        &nbsp;
+    </div>
+    <div class="addColor2">
+        &nbsp;
+    </div>
+    <!--POPUP-->
+    <div class="popup">
+        <div class="popup__container">
+            <div class="popup__front">
+                <div class="popup_title">
+                    <p>Administrator panel</p>
+                    <h1>(unlock the input field by clicking the name)</h1>
+                </div>
+
+                <button class="popup_close"><b>&#215;</b></button>
+                <div class="admin_container">
+                    <script>
+                        var dataFromServer = '<%= table %>';
+                    </script>
+                    <form class="admin_wrapper"> 
+                        
+                        <h1>SENDER</h1>
+                        
+                        <label for="senderEnableCheckboxName" class="unselectable">Firstname and Lastname</label>
+                        <input type="checkbox" id="senderEnableCheckboxName" hidden>
+
+                        <input type="text" value="<%= table[0].CUSTOMERNAME %>" id="admin_name" name="sender_name" disabled/>
+                        <label for="senderEnableCheckboxPhone" class="unselectable">Phone number</label>
+                        <input type="checkbox" id="senderEnableCheckboxPhone" hidden>
+                        <input type="text" value="<%= table[0].CUSTOMERPHONE %>" id="admin_name" name="sender_name" disabled/>
+                        <label for="senderEnableCheckboxCountry" class="unselectable">Country</label>
+                        <input type="checkbox" id="senderEnableCheckboxCountry" hidden>
+                        <input type="text" value="<%= table[0].CUSTOMERCOUNTRY %>" id="admin_country" name="sender_country" disabled/>  
+                        <label for="senderEnableCheckboxCity" class="unselectable">City</label>
+                        <input type="checkbox" id="senderEnableCheckboxCity" hidden>
+                        <input type="text" value="<%= table[0].CUSTOMERCITY %>" id="admin_city" name="sender_city" disabled/>
+                        <label for="senderEnableCheckboxStreet" class="unselectable">Street</label>
+                        <input type="checkbox" id="senderEnableCheckboxStreet" hidden>
+                        <input type="text" value="<%= table[0].CUSTOMERSTREET %>" id="admin_street" name="sender_street" disabled/>
+                        <label for="senderEnableCheckboxHouseNumber" class="unselectable">House number</label>
+                        <input type="checkbox" id="senderEnableCheckboxHouseNumber" hidden>
+                        <input type="text" value="<%= table[0].CUSTOMERHOUSENUMBER %>" id="admin_houseNr" name="sender_housenumber" disabled />
+                        <label for="senderEnableCheckboxPostal" class="unselectable">Postal code</label>
+                        <input type="checkbox" id="senderEnableCheckboxPostal" hidden>
+                        <input type="text" value="<%= table[0].CUSTOMERPOST %>" id="admin_postalcode" name="sender_post" disabled/>
+
+                    </form>    
+
+                    <form class="admin_wrapper">   
+                        
+                        <h1>RECEIVER</h1>
+                        
+                        <label for="receiverEnableCheckboxName" class="unselectable">Firstname and Lastname</label>
+                        <input type="checkbox" id="receiverEnableCheckboxName" hidden>
+                        
+                        <input type="text" value="<%= table[0].RECEIVERNAME %>" id="admin_name" name="sender_name" disabled/>
+
+                        <label for="receiverEnableCheckboxPhone" class="unselectable">Phone number</label>
+                        <input type="checkbox" id="receiverEnableCheckboxPhone" hidden>
+
+                        <input type="text" value="<%= table[0].RECEIVERPHONE %>" id="admin_name" name="sender_name" disabled/>
+
+                        <label for="receiverEnableCheckboxCountry" class="unselectable">Country</label>
+                        <input type="checkbox" id="receiverEnableCheckboxCountry" hidden>
+
+                        <input type="text" value="<%= table[0].RECEIVERCOUNTRY %>" id="admin_country" name="sender_country" disabled/>  
+
+                        <label for="receiverEnableCheckboxCity" class="unselectable">City</label>
+                        <input type="checkbox" id="receiverEnableCheckboxCity" hidden>
+
+                        <input type="text" value="<%= table[0].RECEIVERCITY %>" id="admin_city" name="sender_city" disabled/>
+
+                        <label for="receiverEnableCheckboxStreet" class="unselectable">Street</label>
+                        <input type="checkbox" id="receiverEnableCheckboxStreet" hidden>
+
+                        <input type="text" value="<%= table[0].RECEIVERSTREET %>" id="admin_street" name="sender_street" disabled/>
+
+                        <label for="receiverEnableCheckboxHouseNumber" class="unselectable">House number</label>
+                        <input type="checkbox" id="receiverEnableCheckboxHouseNumber" hidden>
+
+                        <input type="text" value="<%= table[0].RECEIVERHOUSENUMBER %>" id="admin_houseNr" name="sender_housenumber" disabled />
+
+                        <label for="receiverEnableCheckboxPostal" class="unselectable">Postal code</label>
+                        <input type="checkbox" id="receiverEnableCheckboxPostal" hidden>
+
+                        <input type="text" value="<%= table[0].RECEIVERPOST %>" id="admin_postalcode" name="sender_post" disabled/>
+
+                    </form>
+
+                </div>
+                
+                <div class="admin_status">
+                    <label for="admin_status">Current status</label>
+                    <input type="text" value="<%= table[0].STATUSTEXT %>" id="admin_status" name="orderStatus" disabled/>
+                    <label for="admin_status">Update Status</label>
+                    <select name="admin_status" id="admin_status" >
+                        <option value="empty">-</option>
+                        <option value="Pending">Pending</option>
+                        <option value="delivery">In delivery</option>
+                        <option value="Delivered">Delivered</option>
+                    </select>
+                </div>
+
+                <div class="admin_status_item">
+                    <div class="admin_status_button">
+                        <button class="order-update">UPDATE</button>
+                    </div>
+                    <div class="admin_status_button">
+                        <button class="order-delete">DELETE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+
+    <!--HOMPAGE-->
+    <div class="wrapper">
+        <!--Navigation-->
+        <div class="Navigation">
+            <div class="Navigation__title">
+                <a href="/">wicher</a>
+            </div>
+            <div class="Navigation__list">
+                <ul>
+                    <li>transport</li>
+                    <li>przeprowadzki</li>
+                    <li>kontakt</li>
+                    <li>zamow busa</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        
+    <div class="orders_container">
+        <h1>List of orders</h1>
+        <div class="orders_header">
+            <div class="orders_item-number">Order ID</div>
+            <div class="orders_item-sender">From</div>
+            <div class="orders_item-receiver">To</div>
+            <div class="orders_item-status">Status</div>
+            <div class="orders_item-details">Update status</div>
+        </div>
+
+        <div class="orders_form">
+            <% table.forEach(function(item, index) { %>
+                <div class="orders_item"> 
+                    <div class="orders_item-number"> <%= item.CUSTOMERINDEX %></div>
+                    <div class="orders_item-sender"><%= item.CUSTOMERNAME  %></div>
+                    <div class="orders_item-receiver"><%= item.RECEIVERNAME %></div>
+                    <div class="orders_item-status"><%= item.STATUSTEXT %></div>
+                    <div class="orders_item-details"><button class="getDetailsButton" data-index="<%= index %>">Details</button></div>
+                </div>   
+            <% }) %>
+         
+        </div>     
+    </div>
+
+
+
+    <script src="Script/login.js"></script> 
+   
+</body>
+</html> 

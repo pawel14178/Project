@@ -1,0 +1,40 @@
+
+
+@import url(components/grid.css);
+
+@import url(components/popup.css);
+@import url(components/popupFront.css);
+@import url(components/popupBack.css);
+
+@import url(components/navigation.css);
+@import url(components/top.css);
+@import url(components/prizes.css);
+@import url(components/body.css);
+@import url(components/testimonials.css);
+
+@import url(components/utilities.css);
+@import url(components/animations.css);
+
+@import url(login_component/login.css);
+@import url(login_component/utility.css);
+@import url(login_component/popup.css);
+@import url(login_component/adminPopup.css);
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+body{
+    font-family: 'Outfit';
+    font-size: 10px;
+    color: white;
+    background-color: #00062e;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+  color:white;
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Przeprowadzki, bus, transport, Lublin, Polska" />
+    <meta http-equiv="author" content="Pawel Jakubiec" /> 
+    <link href= "css/main.css" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
+    <title>Busy</title>
+    
+</head>
+<body>
+<!--Header-->
+    <div class="addColor1">
+        &nbsp;
+    </div>
+    <div class="addColor2">
+        &nbsp;
+    </div>
+    <!--POPUP-->
+    <div class="popup">
+        <div class="popup__container">
+            <div class="popup__front">
+                <div class="popup_title">
+                    <p>Witamy serdecznie</p>
+                </div>
+                <div class="popup_desc">
+                    <p>Wypelnij ankiete i wyslij paczke jeszcze dzis!</p>
+                </div>
+                <div class="popup_ad">
+                    <p class="subheader">wiosenna promocja</p>
+                    <p class="headerStyle">oszczedzaj z nami</p>
+                    <p class="descStyle1">15% znizki</p>
+                    <img src="myIcons/egg.png" alt="" class="popup_image"/>
+                </div>
+                <button class="popup_close"><b>&#215;</b></button>
+                <form class="popup_wrapper" id="myForm" action="/process" method="POST">
+                    <div class="popup_container">                        
+                        <div class="popup_sender">
+                            <fieldset class="popup_person">
+                                <legend>
+                                    Nadawca:
+                                </legend>
+                                <label for="popup_name">Imie i nazwisko</label>
+                                <input type="text" id="popup_name" placeholder="Jan Kowalski" name="CUSTOMERNAME" required/>
+                                <label for="popup_phone">Numer telefonu</label>
+                                <input type="number" id="popup_phone" placeholder="0666777888" name="CUSTOMERPHONE" required/>
+                            </fieldset>
+                            
+                            <fieldset class="popup_fieldset">
+                                <legend>
+                                    Skad:
+                                </legend>
+
+                                <div class="popup_fieldset_country">
+                                    <input type="radio" id="pl" name="CUSTOMERCOUNTRY" value="Polska" checked>
+                                    <label for="pl">Polska</label><br>
+                                    <input type="radio" id="nl" name="CUSTOMERCOUNTRY" value="Holandia">
+                                    <label for="nl">Holandia</label><br>
+                                </div>
+                                <label for="popup_city">Miejscowosc</label>
+                                <input type="text" id="popup_city" name="CUSTOMERCITY" required/>
+                                <label for="popup_street">Ulica</label>
+                                <input type="text" id="popup_street" name="CUSTOMERSTREET" required/>
+                                <label for="popup_houseNr">Numer domu</label>
+                                <input type="text" id="popup_houseNr" name="CUSTOMERHOUSENUMBER" required/>
+                                <label for="popup_postalcode">Kod pocztowy</label>
+                                <input type="text" id="popup_postalcode" name="CUSTOMERPOST" required/>
+
+                            </fieldset>
+                        </div>
+                        <div class="popup_sender">
+                            <fieldset class="popup_person">
+                                <legend>
+                                    Odbiorca:
+                                </legend>
+                                <label for="popup_name">Imie i nazwisko</label>
+                                <input type="text" id="popup_name" placeholder="Jan Kowalski" name="RECEIVERNAME" required/>
+                                <label for="popup_phone">Numer telefonu</label>
+                                <input type="number" id="popup_phone" placeholder="0666777888" name="RECEIVERPHONE" required/>
+                            </fieldset>
+                            <fieldset class="popup_fieldset">
+                                <legend>
+                                    Dokad:
+                                </legend>
+                                <div class="popup_fieldset_country">
+                                    <input type="radio" id="pl_" name="RECEIVERCOUNTRY" value="Polska">
+                                    <label for="pl_">Polska</label><br>
+                                    <input type="radio" id="nl_" name="RECEIVERCOUNTRY" value="Holandia" checked>
+                                    <label for="nl_">Holandia</label><br>
+                                </div>
+
+                                <label for="popup_city">Miejscowosc</label>
+                                <input type="text" id="popup_city" name="RECEIVERCITY" required/>
+                                <label for="popup_street">Ulica</label>
+                                <input type="text" id="popup_street" name="RECEIVERSTREET" required/>
+                                <label for="popup_houseNr">Numer domu</label>
+                                <input type="text" id="popup_houseNr" name="RECEIVERHOUSENUMBER" required />
+                                <label for="popup_postalcode">Kod pocztowy</label>
+                                <input type="text" id="popup_postalcode" name="RECEIVERPOST" required/>
+
+                            </fieldset>
+                        </div>
+                    </div>    
+                    <input type="hidden" name="STATUSTEXT" id="status" value="Pending"/>
+                    <input type="submit" value="Wyslij" class="popup_submit">            
+                </form>
+            </div>
+            <div class="popup__back">
+                <button class="popup_close"><b>&#215;</b></button>
+                <button class="popup_close toLeft"><b>&#8249;</b></button>
+                <div class="popup_ad">
+                    <p class="subheader">wiosenna promocja</p>
+                    <p class="headerStyle">oszczedzaj z nami</p>
+                    <p class="descStyle1">15% znizki</p>
+                    <img src="myIcons/egg.png" alt="" class="popup_image2"/>
+                </div>
+                <div class="popup_title">
+                    <p>Gabaryt paczki</p>
+                </div>
+                <div class="popup_desc">
+                    <p>Daj nam znac ile miejsca potrzebujesz</p>
+                </div>
+                <div class="popup_button">
+                    <div class="popup_button__wrap">
+                        <button class="button_letter"><p class="button_center_top">List</p></button>
+                        <button class="button_box__S"><p class="button_center_top">Karton do 30cm<sup>3</sup></p></button>
+                        <button class="button_box__M"><p class="button_center_top">Karton do 100cm<sup>3</sup></p></button>
+                        <button class="button_box__L"><p class="button_center_top">Karton do 150cm<sup>3</sup></p></button>
+                        <button class="button_bike"><p class="button_center_top">Rower</p></button>
+                        <button class="button_tires"><p class="button_center_top">Opony</p></button>
+                        <button class="button_other"><p class="button_center_top">Paleta</p></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+
+    <!--HOMPE-->
+    <div class="wrapper">
+        <!--Navigation-->
+        <div class="Navigation">
+            <div class="Navigation__title">
+                transport samochodowa
+            </div>
+            <div class="Navigation__list">
+                <ul>
+                    <li>transpot</li>
+                    <li>przeprowadzki</li>
+                    <li>kontakt</li>
+                    <li>rower</li>
+                    <a href="/admin">Admin</a>
+                </ul>
+            </div>
+        </div>
+        <!--Main part-->
+        <div class="MainImage">
+            <img src="myIcons/egg.png" alt="smartphone" class="MainImage__map" />
+        </div>
+        <div class="MainText">
+            <div class="MainText__header">
+                gwarancja <br>jakosci
+            </div>
+            <div class="MainText__text subheader">
+                Najbezpieczniejsza firma transportowa <br>w Tomaszowie Lubelskim
+            </div>
+        </div>
+        <div class="MainButtons"> 
+            <button class="mainBtnStyle">
+                transport
+            </button>
+            <button class="secondBtnStyle">
+                przeprowadzka
+            </button>
+        </div>
+        <!--Awarards-->
+        <div class="Prizes subheader"> 
+            Nagrody
+            <div class="Prizes__wrapper">
+                <img src="myIcons/logo1.png" alt="logo1">
+                <img src="myIcons/logo2.png" alt="logo2">
+                <img src="myIcons/logo3.png" alt="logo3">
+                <img src="myIcons/logo4.png" alt="logo4">
+                <img src="myIcons/logo5.png" alt="logo5">                
+            </div>
+        </div>
+        <!--First section-->
+        <div class="BodyImage">
+            <img src="myIcons/maps.png" alt="Todo List" class="MainImage__todo" />
+        </div>
+        <div class="BodyText"> 
+            <div class="BodyText__Wrapper">
+                <div class="headerStyle">
+                    kontrola
+                </div>
+                <div class="descStyle1">
+                    sledz swoje paczki <br> dzieki nadajnikom gps
+                </div>
+                <div class="subheader descPadding">
+                    Sprawdz gdzie dokladnie znajduje sie Twoja paczka
+                </div>
+            </div>            
+        </div>
+        <!--Second section-->
+        <div class="BodyImage2">
+            <img src="myIcons/egg.png" alt="egg" />
+        </div>
+        <div class="BodyText2"> 
+            <div class="BodyText__Wrapper">
+                <div class="headerStyle">
+                    bezpieczenstwo
+                </div>
+                <div class="descStyle1">
+                    nie martw sie o stan paczki po dostarczeniu
+                </div>
+                <div class="subheader descPadding">
+                    Z kazda paczka obchodzimy sie vhuj delikatnie
+                </div>
+            </div>            
+        </div>
+        <!--Testimonials-->
+    </div>
+<!--Footer-->
+    <footer>        
+    </footer>
+    <script src="Script/main.js"></script> 
+</body>
+</html> 

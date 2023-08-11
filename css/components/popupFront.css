@@ -1,0 +1,134 @@
+
+
+.popup__front{
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.popup_image{
+    width: 100%;
+    transform: translateX(-60em);
+    opacity: 0;
+}
+
+
+.popup_title{
+    margin-left: 25%;
+    font-size: 4em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #00062e;
+    text-align: center;
+}
+
+.popup_desc{
+    margin-left: 25%;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #00232e;
+    text-align: center;
+}
+
+
+
+
+.popup_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.popup_wrapper{
+    padding-left: 30%;
+    color:#00062e;
+    margin: 2em;
+    font-size:1.8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: space-around;
+    flex-wrap: wrap;
+}
+
+.popup_person{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup_person input{
+    border: none;
+    width: 20em;
+    height: 2em;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.popup_person input:focus{
+    outline: none;
+    border-color: #429aff;
+    box-shadow: 0 0 15px rgba(128, 128, 128, 0.89);
+}
+
+.popup_fieldset{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+fieldset input:not([type=radio]){
+
+    border: none;
+    width: 90%;
+    height: 3em;
+    margin: 0.5em;
+    background: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+fieldset input:hover{
+    border-bottom: 2px solid rgb(31, 102, 253);
+}
+
+fieldset input[type=radio]{
+    cursor: pointer;
+    margin: 1em;
+    height: 2em;
+    width: 2em;
+    background: none;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+
+.popup_fieldset input:focus{
+    outline: none;
+    border-color: #429aff;
+    background-color: rgba(255, 255, 255, 0.904);
+}
+
+.popup_submit{    
+    width: 8em;
+    height: 3em;
+    background: none;
+    border: none;
+    border-bottom: 2px solid rgb(0, 0, 0);    
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 1em auto;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.popup_submit:hover{
+    transform: scale(1.05);
+    border-bottom: 2px solid rgb(31, 102, 253);
+    transition: .2s;
+}

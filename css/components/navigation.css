@@ -1,0 +1,38 @@
+.Navigation__title{
+    text-transform:uppercase;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Navigation__list ul{
+    margin:0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Navigation__list ul li{
+    margin: 0 1em;
+    font-size: 2em;
+    cursor: pointer;
+    position: relative;
+}
+
+.Navigation__list ul a{
+    margin: 0 1em;
+    font-size: 2em;
+    cursor: pointer;
+    position: relative;
+}
+
+.Navigation__list ul li::before{
+    display: block;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+}
+.Navigation__list ul li:hover::before{
+    border-bottom: 2px solid rgba(255, 255, 255, 0.342);
+}

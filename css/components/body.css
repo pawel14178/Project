@@ -1,0 +1,39 @@
+.BodyImage img{
+    width: 100%;
+    height: 100%;
+}
+
+.descStyle1{
+    font-size: 4em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    font-weight: bold;
+}
+
+.descPadding{
+    margin: 3.5em 0;
+}
+
+.headerStyle{
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #95D0D0;
+    font-weight: bold;
+}
+
+.BodyText2{ 
+    grid-area: 10 / 1 / 13 / 7; 
+}
+.BodyImage2{
+    grid-area: 9 / 7 / 12 / 13; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.BodyImage2 img{
+    width: 100%;
+    height: 100%;
+}

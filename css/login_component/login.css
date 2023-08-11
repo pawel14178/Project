@@ -1,0 +1,121 @@
+.wrapper{
+    height: 50px;
+}
+
+.orders_container{
+    position: relative;
+    height: 20%;
+    margin: 10%;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: rgba(255, 252, 247, 0.24);
+    padding: 5em;
+}
+
+.orders_form{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.order_container{
+    margin: 0;
+}
+
+.orders_header{
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+    border-bottom: 1px solid white;
+}
+
+.orders_form{
+    margin: 2% 0;
+}
+
+h1{
+    margin: 0 40px 50px;
+    font-size: 40px;
+}
+
+.orders_item{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.orders_item-number{
+    width: 10%;
+}
+.orders_item-sender{
+    width: 25%;
+}
+.orders_item-receiver{
+    width: 25%;
+}
+.orders_item-status{
+    width: 25%;
+}
+.orders_item-details{
+    width: 15%;
+}
+
+.orders_item button{
+    cursor: pointer;
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform,opacity;
+    z-index: 0;
+}
+
+.orders_item button:hover{
+    background: #F6F9FE;
+    color: #174ea6;
+}
+
+.orders_item button:active{
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+    outline: none;
+}
+
+.orders_item button:focus{
+    outline: none;
+    border: 2px solid #4285f4;
+}

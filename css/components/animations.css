@@ -1,0 +1,36 @@
+.show{
+    transform: scale(1);
+    opacity: 1;
+    transition: .2s;
+}
+
+
+.blur{
+    filter:blur(10px);
+    transition: all .5s;
+}
+
+.image_move{
+    transform: translateX(0);
+    opacity: 1;
+    transition: .5s cubic-bezier(0.94,-0.07, 0.38, 1.49);
+    transition-delay: .4s;
+}
+
+.image_move-forward{
+    transform: translateX(60em);
+    opacity: 0;
+    transition: .8s cubic-bezier(1,-0.96, 0.77, 1.01);
+    transition-delay: .1s;
+}
+
+.image_move2{
+    transform: translateX(0);
+    opacity: 1;
+    transition: .5s cubic-bezier(0.94,-0.07, 0.38, 1.49);
+    transition-delay: 1.5s;
+}
+
+.rotate{
+    transform: rotateY(180deg);
+}

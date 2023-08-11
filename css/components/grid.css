@@ -1,0 +1,61 @@
+.wrapper{
+    position: relative;
+    display: grid;
+    padding: 0 10%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(16, 0.8fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 0px;
+    z-index: 3;
+}
+
+.Navigation{
+    grid-area: 1 / 1 / 1 / 13; 
+    display: flex;
+    justify-content:space-between;
+    align-items: top;
+    padding-top: 2em;
+}
+
+.MainText{
+    grid-area: 2 / 1 / 4 / 7; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.MainImage{
+    grid-area: 2 / 7 / 5 / 13; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MainButtons{
+    grid-area: 4 / 1 / 5 / 7; 
+    display: flex;
+    align-items: center;
+}
+
+.Prizes{
+    grid-area: 6 / 1 / 7 / 13;
+    text-transform: uppercase;
+}
+
+.BodyText{ 
+    grid-area: 8 / 7 / 11 / 13; 
+}
+
+.BodyImage{
+    grid-area: 7 / 1 / 10 / 7; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Testimonials{
+    grid-area: 12 / 1 / 13 / 13; 
+    background-color: #8d9bfa;
+}
+
